@@ -54,3 +54,7 @@ npm run build
 ## License
 
 Apache-2.0.
+
+## Automated advisory mode
+
+PRPilot v0.2 includes an idempotent GitHub advisory runner. On supported `repoguardian/*` pull-request events it reads PR metadata, changed paths and CI evidence, evaluates the deterministic review policy, and creates or updates one marked advisory comment. It runs trusted PRPilot code rather than target-PR code and retains no merge or GitHub approval authority.
